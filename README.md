@@ -25,3 +25,6 @@ const html = renderToString(
 
 console.log(html); // '<div class="text">This is <strong>amazing!</strong></div><img src="wonderful-kittens.jpg"></img>'
 ```
+
+## Why?
+I don't know, just wanted to try to figure out how JSX and [ReactDOMServer#RenderToStaticMarkup](https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup) works I guess?
