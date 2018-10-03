@@ -15,6 +15,7 @@ You put in JSX and out comes HTML string.
 
 ```javascript
 /** @jsx h */
+const { renderToString, h } = require('./renderer');
 
 const html = renderToString(
   <Fragment>
