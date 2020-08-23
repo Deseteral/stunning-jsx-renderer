@@ -1,4 +1,4 @@
-function h(nodeName, props, ...args) {
+function createElement(nodeName, props, ...args) {
   const children = args.length ? [].concat(...args) : null;
 
   return typeof nodeName === 'function'
@@ -21,4 +21,4 @@ function renderToString(vnode) {
     : `<${nodeName}${attributes}>${children}</${nodeName}>`;
 }
 
-module.exports = { renderToString, h };
+module.exports = { renderToString, createElement };

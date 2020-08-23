@@ -1,4 +1,4 @@
-# stunning-jsx-to-string-renderer
+# stunning-jsx-renderer
 
 🎈 ☃️ 🎈 ⚡ 🎈 ️🍾 🎈 🗿 🎈
 
@@ -14,8 +14,8 @@ Just don't use it for anything serious and you will be fine.
 You put in JSX and out comes HTML string.
 
 ```javascript
-/** @jsx h */
-const { renderToString, h } = require('./renderer');
+/** @jsx createElement */
+const { renderToString, createElement } = require('./src/server-side');
 
 const html = renderToString(
   <Fragment>
@@ -27,5 +27,18 @@ const html = renderToString(
 console.log(html); // '<div class="text">This is <strong>amazing!</strong></div><img src="wonderful-kittens.jpg"></img>'
 ```
 
+There's also client-side version:
+
+```javascript
+/** @jsx createElement */
+
+domRender(
+  <div class="text">This is <strong>amazing!</strong></div>
+  document.body
+);
+
+console.log(document.body.innerHTML); // '<div class="text">This is <strong>amazing!</strong></div>'
+```
+
 ## Why?
-I don't know, just wanted to try to figure out how JSX and [ReactDOMServer#RenderToStaticMarkup](https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup) works I guess?
+I don't know, just wanted to try to figure out how JSX and [ReactDOMServer#RenderToStaticMarkup](https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup) and [ReactDOM#render](https://reactjs.org/docs/react-dom.html#render) works I guess?
