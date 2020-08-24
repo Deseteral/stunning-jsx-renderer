@@ -16,9 +16,7 @@ function renderToString(vnode) {
 
   const children = (vnode.children || []).map(renderToString).join('');
 
-  return nodeName === 'Fragment'
-    ? children
-    : `<${nodeName}${attributes}>${children}</${nodeName}>`;
+  return `<${nodeName}${attributes}>${children}</${nodeName}>`;
 }
 
 module.exports = { renderToString, createElement };
