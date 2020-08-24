@@ -18,13 +18,13 @@ You put in JSX and out comes HTML string.
 const { renderToString, createElement } = require('./src/server-side');
 
 const html = renderToString(
-  <Fragment>
+  <section>
     <div class="text">This is <strong>amazing!</strong></div>
     <img src="wonderful-kittens.jpg" />
-  </Fragment>
+  </section>
 );
 
-console.log(html); // '<div class="text">This is <strong>amazing!</strong></div><img src="wonderful-kittens.jpg"></img>'
+console.log(html); // '<section><div class="text">This is <strong>amazing!</strong></div><img src="wonderful-kittens.jpg"></img></section>'
 ```
 
 There's also client-side version:
